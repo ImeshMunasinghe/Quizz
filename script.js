@@ -34,7 +34,7 @@ const questions =[
     }
 ];
 
-const questionElemment=document.getElementById("question");
+const questionElement=document.getElementById("question");
 const answerButtons=document.getElementById("answer-buttons");
 const nextButton=document.getElementById("next-btn");
 
@@ -60,10 +60,10 @@ function showQuestion() {
         button.classList.add("btn");
         answerButtons.appendChild(button);
         if (answer.correct) {
-            button.dataset.correct = answer.correct;
+            button.dataset.correct = answer.correct;}
         button.addEventListener("click",selectAnswer);
         
-}});
+});
 }
 
 function resetState() {
@@ -90,9 +90,10 @@ function resetState() {
         nextButton.style.display = "block";
     }
 
-    function showScore(){
+function showScore(){
     resetState();
-    questionElemment.innerHTML= 'You scored ${score} out of ${questions.length}!';
+    questionElemment.innerHTML = `You scored ${score} out of ${questions.length}!`;
+
     nextButton.innerHTML="Play Again";
     nextButton.style.display = "block";
     }
