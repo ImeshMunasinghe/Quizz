@@ -12,6 +12,6 @@ body{
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
-    boeder-radius: 10px;
+    border-radius: 10px;
     padding: 30px;
 }
